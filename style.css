@@ -1,0 +1,644 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+body {
+  background-color: #f8f8ff;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.discountOffer-content span {
+  font-weight: bold;
+}
+
+.discountOffer {
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+/*------------------------Nav Bar-----------------------------------*/
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.navMenu {
+  display: flex;
+  gap: 30px;
+}
+
+.navLinks {
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.navLinks:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+
+.signUp a {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.signUp a:hover {
+  background-color: #696666;
+  color: white;
+  transition: 0.5s;
+}
+
+.menu-line {
+  height: 3px;
+  width: 20px;
+  background-color: black;
+  margin-bottom: 3px;
+}
+
+.menu {
+  cursor: pointer;
+  display: none;
+}
+
+.side-nav {
+  width: 50%;
+  background-color: #f8f8ff;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  right: 0;
+  display: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  animation: sideNavAnimation 1s;
+}
+
+.side-navMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.side-signUp > a {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.side-signUp > a:hover {
+  background-color: #696666;
+  color: white;
+  transition: 0.5s;
+}
+
+.closeNav {
+  text-align: right;
+  padding: 18px 26px;
+}
+
+@keyframes sideNavAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transition: 0.6s ease-in;
+  }
+}
+
+.showMenu {
+  display: block;
+  transition: 1s ease-in;
+}
+/*------------------------------Intro Slider-----------------------------------*/
+
+.slider {
+  width: 100%;
+  height: 92vh;
+  background-color: black;
+  position: relative;
+}
+
+.slides img {
+  width: 100%;
+  height: 92vh;
+  display: none;
+}
+
+.slide-content {
+  background-color: rgba(0, 0, 0, 0.568);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.slide-content__1 {
+  width: 70%;
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.shop-now {
+  background-color: white;
+  padding: 10px 15px;
+  border: 2px solid white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.shop-now:hover {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+img.displaySlide {
+  display: block;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 5rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.prev {
+  left: 2%;
+}
+
+.next {
+  right: 2%;
+}
+/*----------------------------Top Brands-----------------------------------*/
+.top-brands {
+  background-color: #dcd6d6;
+}
+
+.top-brand-heading {
+  padding: 20px 20px 0 20px;
+}
+
+.brands {
+  background-color: #dcd6d6;
+  overflow: hidden;
+  padding: 30px 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.brands:hover .logo-slides {
+  animation-play-state: paused;
+}
+
+.logo-slides {
+  white-space: nowrap;
+  animation: 7s slide infinite linear;
+  display: inline-block;
+}
+
+.brand-logo {
+  height: 100px;
+  margin: 0 40px;
+}
+
+/*--------------------------------Why Us--------------------------------------*/
+
+.why-us {
+  margin: 50px 0;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.why-us-heading {
+  padding-bottom: 30px;
+  padding-left: 7px;
+}
+
+.why-us-content-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.why-us-contents {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.why-us-item {
+  background-color: #dfeeea;
+  text-align: center;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.why-us-item > * {
+  padding: 10px 7px;
+}
+
+.why-us-item i {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.why-us-head {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.why-us-content {
+  text-align: justify;
+  padding: 0 15px 20px 15px;
+}
+
+/*-------------------------New Arrivals--------------------------------------*/
+
+.new-arrivals {
+  background-color: #fef5d9;
+  margin-bottom: 50px;
+  padding: 0 20px 30px 20px;
+}
+
+.new-arrivals-heading {
+  padding: 20px 0 25px 0;
+}
+
+.new-arrival-item {
+  width: 300px;
+  position: relative;
+}
+
+.new-arrival-item img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.new-arrival-cars {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 25px;
+}
+
+.new-arrivals-item_view-details {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.568);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-details {
+  background-color: white;
+  padding: 7px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+
+.view-details:hover {
+  background-color: transparent;
+  color: white;
+  fill: white;
+  border: 2px solid white;
+}
+
+.view-details:hover svg path {
+  fill: white;
+}
+
+/*---------------------------Best Sellers------------------------------------*/
+
+.best-sellers {
+  margin-bottom: 50px;
+  padding: 0 20px 30px 20px;
+}
+
+.best-sellers-heading {
+  padding: 20px 0 25px 0;
+}
+
+.best-sellers-cars {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.best-sellers-item {
+  width: 300px;
+  background-color: #ddecff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.best-sellers-item img {
+  width: 100%;
+}
+
+.best-sellers-item-details {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.best-sellers-tag {
+  background-color: rgb(11, 98, 12);
+  display: inline;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.car-name {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.car-price {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.view-info {
+  color: black;
+  font-size: 15px;
+  gap: 10px;
+  border-radius: 5px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/*--------------------------Limited offers---------------------------------*/
+.limitted-offers {
+  background-color: #ead1dc;
+  margin-bottom: 50px;
+}
+
+.limited-offers-comtainer {
+  padding: 70px;
+  display: flex;
+  width: 100%;
+  gap: 10%;
+  align-items: center;
+}
+
+.limitted-offer-image {
+  width: 100%;
+}
+
+.limitted-offer-image img {
+  width: 100%;
+}
+
+.limitted-offers-heading {
+  font-size: 40px;
+}
+
+.limited-offer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: safe;
+  justify-content: center;
+  gap: 10px;
+}
+
+.limitted-offers-shop-now {
+  background-color: #ff8bbe;
+  padding: 7px 12px;
+  border: 2px solid #ff8bbe;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.limited-offer-content-para {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.limited-offer-content-para span {
+  font-weight: bold;
+}
+
+.limitted-offers-shop-now:hover {
+  background: transparent;
+  border: 2px solid #ff8bbe;
+  color: black;
+}
+
+/*----------------------------News Letter-------------------------------------*/
+
+.news-letter {
+  padding: 30px;
+  margin-bottom: 20px;
+}
+.news-letter-head {
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.news-letter-container-2 {
+  text-align: center;
+}
+
+.news-letter-content {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#news-letter {
+  background-color: transparent;
+  width: 60%;
+  padding: 5px;
+  height: 30px;
+  border: 3px solid black;
+  margin-bottom: 15px;
+}
+
+.news-letter-subscribe-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.news-letter-subscribe-button {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  gap: 7px;
+}
+
+.news-letter-subscribe-button:hover {
+  text-decoration: underline;
+  background-color: transparent;
+  color: black;
+}
+
+/*--------------------------------Footer---------------------------------------*/
+
+.footer {
+  background-color: #2d2f31;
+  padding: 20px 0;
+}
+
+.footer-logo {
+  color: white;
+  padding: 30px 20px;
+}
+
+.footer-para {
+  padding: 0 20px;
+  color: white;
+  font-size: 20px;
+}
+
+.social-icons {
+  padding: 15px 20px;
+  display: flex;
+  gap: 30px;
+}
+
+.copy-rights {
+  padding: 0px 20px;
+  color: white;
+  font-size: 20px;
+}
+
+/*----------------------------------------Media Quries---------------------------------------------*/
+
+@media screen and (max-width: 980px) {
+  .navMenu {
+    display: none;
+  }
+
+  .signUp {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .limited-offers-comtainer {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .limited-offer-content {
+    align-items: start;
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 660px) {
+    .brand-logo {
+      height: 70px;
+    }
+
+    .why-us-item {
+      width: 100%;
+    }
+
+    .new-arrival-item {
+      width: 100%;
+    }
+
+    .best-sellers-item {
+      width: 100%;
+    }
+  }
+}
